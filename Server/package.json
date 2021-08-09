@@ -1,0 +1,49 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "testlocal": "SET NODE_ENV='test' | jest",
+    "coveragelocal": "SET NODE_ENV='test' | jest --coverage",
+    "coverage": "jest --coverage",
+    "start": "node server.js",
+    "production": "NODE_ENV='production' node server.js",
+    "test1": "docker-compose run node_latest npm test",
+    "test2": "docker-compose run node_10 npm test",
+    "test3": "docker-compose run node_8 npm test",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.2.0",
+    "ws": "^6.1.4"
+  },
+  "jest": {
+    "automock": false,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/coverage/**",
+      "!**/db/**",
+      "!**/app.js",
+      "!**/server.js"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "codecov": "^3.1.0",
+    "coveralls": "^3.0.2",
+    "jest": "^24.1.0",
+    "superagent": "^4.1.0",
+    "supertest": "^3.4.2"
+  }
+}

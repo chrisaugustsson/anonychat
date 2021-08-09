@@ -1,0 +1,44 @@
+.chat-box {
+    max-width: 80%;
+    min-width: 10%;
+    word-wrap:break-word;
+    margin: 0.3em;
+}
+
+.section {
+    padding: 1em;
+}
+
+.chat-container {
+    height: 400px;
+    max-width: 700px;
+    margin: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.outer-chat-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.message-container-left {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.message-container-right {
+    display: flex;
+    justify-content: flex-end;
+} 
+
+.expandable {
+    min-height: 2em;
+    height: auto;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
